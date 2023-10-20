@@ -25,12 +25,20 @@ class HomepageState extends State<Homepage> {
                 Stack(
                   children: [
                     Container(
-                      color: Colors.red,
-                      padding: EdgeInsets.all(12),
-                    ),
-                    Container(
-                      color: Color(0xFFF5F5EB),
-                      padding: EdgeInsets.all(12),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 71,
+                            color: Colors.white,
+                            padding: EdgeInsets.all(12),
+                          ),
+                          Container(
+                            height: 71,
+                            color: Color(0xFFF5F5EB),
+                            padding: EdgeInsets.all(12),
+                          ),
+                        ],
+                      ),
                     ),
                     RecipeRecomandation(),
                   ],
