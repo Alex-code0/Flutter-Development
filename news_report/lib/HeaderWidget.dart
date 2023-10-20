@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class HeaderWidget extends StatelessWidget {
-  const HeaderWidget(
-      {super.key, required this.HeaderText, required this.MarginTop});
+  const HeaderWidget({
+    super.key,
+    required this.HeaderText,
+    required this.MarginTop,
+    required this.MarginBottom,
+  });
   final String HeaderText;
-  final double MarginTop;
+  final double MarginTop, MarginBottom;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, top: MarginTop),
+      margin: EdgeInsets.only(
+          left: 16, right: 16, top: MarginTop, bottom: MarginBottom),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

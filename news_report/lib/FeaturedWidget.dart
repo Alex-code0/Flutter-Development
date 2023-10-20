@@ -4,9 +4,9 @@ class FeaturedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 4, top: 16),
+      margin: EdgeInsets.only(left: 4),
       width: MediaQuery.of(context).size.width,
-      height: 258,
+      height: 250,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 3,
@@ -27,16 +27,19 @@ class FeaturedWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        "Joe Biden in Press Conference USA...",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          backgroundColor: Colors.red,
+                      Container(
+                        margin: EdgeInsets.only(bottom: 8),
+                        width: 290,
+                        child: Text(
+                          "Joe Biden in Press Conference USA...",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
                         ),
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
                       ),
                       TextButton(
                         onPressed: () {},
